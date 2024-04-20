@@ -180,11 +180,11 @@ function checkOverlapGif1(a, b) {
     instructions.innerHTML = "Press the ENTER key to talk!";
     instructions.style.visibility = "visible";
     chat.style.visibility = "visible";
-    console.log("")
 
-    // setTimeout(function() {
-    //   instructions.style.visibility = "hidden";
-    // }, 5000);
+
+    setTimeout(function() {
+      instructions.style.visibility = "hidden";
+    }, 5000);
 
     // document.addEventListener("keydown", function(e) {
     //   if (e.key === "Enter") {
@@ -210,18 +210,10 @@ function checkOverlapGif2(a, b) {
     instructions.innerHTML = "Press the ENTER key to talk!";
     instructions.style.visibility = "visible";
     chat2.style.visibility = "visible";
-    console.log("")
 
-    // setTimeout(function() {
-    //   instructions.style.visibility = "hidden";
-    // }, 5000);
-
-    // document.addEventListener("keydown", function(e) {
-    //   if (e.key === "Enter") {
-    //     go = true;
-    //     console.log("hey")
-    //   }
-    // });
+    setTimeout(function() {
+      instructions.style.visibility = "hidden";
+    }, 5000);
   } else {
     chat2.style.visibility = "hidden";
     b.style.visibility = "hidden";
@@ -245,17 +237,15 @@ function checkOverlapWelcome(a,b){
 
 
 
+  
 
 
 let bot = new RiveScript();
 
 const message_container = document.querySelector('.messages');
-const form = document.querySelector('form');
-const input_box = document.querySelector('input');
-
-// const brains = [
-//   'https://gist.githubusercontent.com/awesammcoder/91e0f6c527bfdc03b8815289ca4af150/raw/6410ce00b7e1ea0dbd28be03b6eaab64252a841d/brain.rive'
-// ];
+const message_container1 = document.querySelector('.messages1');
+const form = document.querySelector('.actions');
+const input_box = document.querySelector('.write');
 
 bot.loadFile("brain.rive").then(botReady).catch(botNotReady);
 
@@ -266,13 +256,14 @@ form.addEventListener('submit', (e) => {
 });
 
 function botReply(message){
-  message_container.innerHTML += `<div class="bot">${message}</div>`;
+  message_container.innerHTML = `<div class="bot">${message}</div>`;
   location.href = '#edge';
 }
 
 function selfReply(message){
-  message_container.innerHTML += `<div class="self">${message}</div>`;
+  message_container1.innerHTML = `<div class="self">${message}</div>`;
   location.href = '#edge';
+  console.log("gvhwdbjaks");
   
   bot.reply("local-user", message).then(function(reply) {
     botReply(reply);
@@ -285,5 +276,52 @@ function botReady(){
 }
 
 function botNotReady(err){
+  console.log("An error has occurred.", err);
+}
+
+
+
+
+
+
+
+
+
+let bot2 = new RiveScript();
+
+const message_container2 = document.querySelector('.messages2');
+const message_container3 = document.querySelector('.messages3');
+const form2 = document.querySelector('.actions2');
+const input_box2 = document.querySelector('.write2');
+
+
+bot2.loadFile("brain2.rive").then(botReady2).catch(botNotReady2);
+
+form2.addEventListener('submit', (e) => {
+  e.preventDefault();
+  selfReply2(input_box2.value);
+  input_box2.value = '';
+});
+
+function botReply2(message){
+  message_container2.innerHTML = `<div class="bot2">${message}</div>`;
+  location.href = '#edge2';
+}
+
+function selfReply2(message){
+  message_container3.innerHTML = `<div class="self2">${message}</div>`;
+  location.href = '#edge2';
+  
+  bot2.reply("local-user", message).then(function(reply) {
+    botReply2(reply);
+  });
+}
+
+function botReady2(){
+  bot2.sortReplies();
+  botReply2('oh nononon');
+}
+
+function botNotReady2(err){
   console.log("An error has occurred.", err);
 }

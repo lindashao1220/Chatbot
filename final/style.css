@@ -135,13 +135,6 @@ body{
 
 
 
-
-
-
-
-
-
-
 * {
   font-family: Courier;
   font-size: 11pt;
@@ -179,22 +172,105 @@ body{
   border-radius: 7px;
 }
 
+.messages1 div {
+  max-width: 60%;
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+
+/* //herber */
 .messages .bot {
-  text-align: left;
-  margin-right: auto;
   background: lightblue;
+  width: 170px;
+  height: 220px;
+  margin: 35px auto; 
+  border: 2px solid #333;
+  position: relative; 
+  left: 700;
+  top: calc(var(--pixel-size) * 38);
+
 }
 
-.messages .self {
-  text-align: right;
-  margin-left: auto;
-  background: #DDD
+.messages1 .self {
+  /* text-align: right;
+  margin-left: auto; */
+  background: #DDD;
+
+  width: 300px;
+  height: 250px;
+  margin: 35px auto; 
+  border: 2px solid #333;
+  position: relative; 
+  left: 720;
+  top: 0;
 }
 
-.chat2{
+
+
+
+
+.chat2 {
   width: 500px;
   height: 90%;
   position: fixed;
   overflow: scroll;
-  border-color: black;
+}
+
+.actions2 {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  width: 100%;
+}
+
+.actions2 input{
+  height: 30px;
+  display: block;
+  width: 100%;
+  outline: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.messages2 div {
+  max-width: 60%;
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.messages3 div {
+  max-width: 60%;
+  display: block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.messages2 .bot2 {
+  background: lightblue;
+  width: 170px;
+  height: 170px;
+  margin: 10px auto;
+  border: 2px solid #333;
+  position: relative; 
+  left: 10px;
+  top: 200px;
+
+}
+
+.messages3 .self2 {
+  background: #DDD;
+  width: 200px;
+  height: 170px;
+  margin: 10px auto;
+  border: 2px solid #333;
+  position: relative; 
+  left: 40px;
+  top: 230px;
 }
