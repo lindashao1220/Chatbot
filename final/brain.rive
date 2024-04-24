@@ -17,11 +17,21 @@
 ! sub what'll = what will
 ! sub who's   = who is
 
-+ [*] hello|hi|hey|good morning [*]
-- Hi there human!
-- Good morning!
-- Hey you!
 
 + *
-- Why don't you say hello to me?
+- This is the praying sound. Across the world, more than 1.5 billion Muslims follow the practice of 'Salah,' which involves performing five daily prayers. These prayer times are spread out throughout the day, starting in the morning and finishing in the evening. So you'll be serenaded by the soothing sounds of prayer in the time they pray. Guess where they usually pray? {topic=1}
 
+> topic 1
++ *
+- Actually UAE offers numerous prayer rooms in public places such as malls, restaurants, and schools, providing a convenient space for people to fulfill their religious obligations. Interestingly, even in places without designated prayer rooms, there are individuals finding spots for their prayers. They just clear a space up find a quiet corner and pray. Do you know why do they pray?{topic=2}
+< topic
+
+> topic 2
++ *
+- Actually, they pray five times a day to remember their Lord, express their love and respect for Him, and invoke and strive to express their gratitude towards Him. So in this way, they will find their own connection with Allah. Ohh, I have actually talked a lot. Hope you have a nice journey in the mosque! Bye bye~ {topic=end}
+< topic
+
+> topic end
+  + *
+  - oki! Bye bye! Hope you have a nice day.
+< topic

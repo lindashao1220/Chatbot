@@ -171,10 +171,18 @@ document.addEventListener("keyup", (e) => {
 // }
 
 function checkOverlapGif1(a, b) {
+  var audio = document.getElementById("myAudio");
+  var audioPlayed = false;
+  
   var aRect = a.getBoundingClientRect();
   var bRect = b.getBoundingClientRect();
   var overlapThreshold = 20;
 
+  if (!audioPlayed && aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
+    audio.play();
+    audioPlayed = true;
+  }
+  
   if (aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
     b.style.visibility = "visible";
     instructions.innerHTML = "Press the ENTER key to talk!";
@@ -272,7 +280,7 @@ function selfReply(message){
 
 function botReady(){
   bot.sortReplies();
-  botReply('oh you are here');
+  botReply('Hey, did you hear the sound coming from the Mosque?');
 }
 
 function botNotReady(err){
@@ -319,9 +327,23 @@ function selfReply2(message){
 
 function botReady2(){
   bot2.sortReplies();
-  botReply2('oh nononon');
+  botReply2("Hello! Marhaba! I am Aya. What's your name?");
 }
 
 function botNotReady2(err){
   console.log("An error has occurred.", err);
 }
+
+
+// var audio = document.getElementById("myAudio");
+// var audioPlayed = false;
+
+// function playAudio() {
+//     if (!audioPlayed) {
+//         audio.play();
+//         audioPlayed = true;
+//     }
+// }
+
+// // Play audio 10 seconds after page load
+// setTimeout(playAudio, 10000); // 10000 milliseconds = 10 seconds

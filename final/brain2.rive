@@ -17,13 +17,45 @@
 ! sub what'll = what will
 ! sub who's   = who is
 
-+ [*] hello|hi|hey|good morning [*]
-- Byebye byebvye
-- Bye
-- Stupid
 
 + *
-- ikehuwndkpq hahbw
+- Hello! Marhaba! I am Aya.
+
++ *
+% hello marhaba i am aya 
+* <get username> == undefined => What is your name?
+- Greetings, <get username>. oh, my friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?
+
++ [my name is|i am|yes my name is|ok my name is|sure my name is|sure i am|ok i am|yes i am|yeah sure my name is|ok sure my name is] *
+% what is your name
+- <set username=<formal>>oh, my old friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?{topic=1}
+
+> topic 1
++ *
+- Anyway, welcome! Behind me is my home. This is a traditional Arab house. We can go to the majlis first!{topic=2}
+< topic
+
+> topic 2
++ *
+- Oh, I forgot to tell you what a majlis (المجلس) is! Majlis is the Arabic word for sitting room, which is a place designed to welcome and entertain guests. A fun fact is that we usually build and decorate the Majlis before every other room. Do you want to know more about the majlis? {topic=3}
+< topic
+
+> topic 3
++ [*]yes|yep|yeah|ok|okay|sure[*]
+- The public majlis is the place where all the people can meet together, even if they are strangers or enemies. If they are at our majlis, then we are friends! We will serve them with dates and Arabic coffee to show that they are welcome. Have you had the chance to taste dates and Arabic coffee before? {topic=4}
++ [*]no|nope|not|sorry[*]
+- Sure! I totally understand your tight time schedule. Hope you enjoy the rest of your trip! Bye! {topic=end}
+< topic
+
+> topic 4
++ [*]yes|yep|yeah|ok|okay|sure[*]
+- Right! It’s nice to know that you have tried it before. The coffee is usually unsweetened, so we usually use sweet dates to make up for the bitter flavor. The date is also a cultural symbol for us, representing hospitality, generosity, and abundance. Anyway, thanks for visiting us, it is very nice talking to you! Hope you have a rest of a pleasant journey!{topic=end}
++ [*]no|nope|not|sorry[*]
+- Ohh, you should definitely try it. The coffee is usually unsweetened, so we usually use sweet dates to make up for the bitter flavor. The date is also a cultural symbol for us, representing hospitality, generosity, and abundance. Anyway, thanks for visiting us, it is very nice talking to you! Hope you have a rest of a pleasant journey!{topic=end}
+< topic
 
 
-
+> topic end
+  + *
+  - oki! Bye bye! Hope you have a nice day.
+< topic

@@ -59,7 +59,7 @@ body{
   image-rendering: pixelated;
   background: url("assets/dino-spritesheet.png")
     0px 0px;
-  left:calc(var(--pixel-size) * 25);
+  left:calc(var(--pixel-size) * 100);
   bottom:calc(var(--pixel-size) * 29);
 }
 
@@ -144,7 +144,6 @@ body{
   width: 500px;
   height: 90%;
   position: fixed;
-  overflow: scroll;
 }
 
 .actions {
@@ -185,12 +184,18 @@ body{
 .messages .bot {
   background: lightblue;
   width: 170px;
-  height: 220px;
+  /* height: 220px; */
   margin: 35px auto; 
   border: 2px solid #333;
-  position: relative; 
-  left: 700;
-  top: calc(var(--pixel-size) * 38);
+  position: absolute; 
+  left: 90px;
+  top: 300px;
+
+
+  overflow: hidden; /* Prevents content from overflowing */
+  word-wrap: break-word; /* Wrap long words */
+  resize: both; 
+  height: auto; /* or you can omit height altogether */
 
 }
 
@@ -199,13 +204,19 @@ body{
   margin-left: auto; */
   background: #DDD;
 
-  width: 300px;
-  height: 250px;
+  width: 170px;
+  /* height: 200px; */
   margin: 35px auto; 
   border: 2px solid #333;
-  position: relative; 
-  left: 720;
-  top: 0;
+  position: absolute; 
+  left: -300px;
+  top: 500px;
+
+
+  overflow: hidden; /* Prevents content from overflowing */
+  word-wrap: break-word; /* Wrap long words */
+  resize: both;
+  height: auto; /* or you can omit height altogether */
 }
 
 
@@ -216,7 +227,6 @@ body{
   width: 500px;
   height: 90%;
   position: fixed;
-  overflow: scroll;
 }
 
 .actions2 {
@@ -255,22 +265,33 @@ body{
 .messages2 .bot2 {
   background: lightblue;
   width: 170px;
-  height: 170px;
+  /* height: 170px; */
   margin: 10px auto;
   border: 2px solid #333;
   position: relative; 
-  left: 10px;
+  left: -10px;
   top: 200px;
+
+  overflow: hidden; /* Prevents content from overflowing */
+  word-wrap: break-word; /* Wrap long words */
+  resize: both; /* Allow resizing */
+  height: auto; /* or you can omit height altogether */
 
 }
 
 .messages3 .self2 {
   background: #DDD;
   width: 200px;
-  height: 170px;
+  /* height: 170px; */
   margin: 10px auto;
   border: 2px solid #333;
   position: relative; 
-  left: 40px;
+  left: -400px;
   top: 230px;
+
+  overflow: hidden; /* Prevents content from overflowing */
+  word-wrap: break-word; /* Wrap long words */
+  resize: both; /* Allow resizing */
+  height: auto; /* or you can omit height altogether */
+
 }
