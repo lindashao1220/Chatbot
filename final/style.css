@@ -74,10 +74,10 @@ body{
   background: url("assets/muslim2.gif");
   /* left: calc(var(--pixel-size) * 1);  */
   /* top:calc(var(--pixel-size) * 20); */
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   position: relative; 
-  left: 700;
-  top: calc(var(--pixel-size) * 38);
+  left: -90px;
+  top: 160px;
 }
 
 #gif-container2 {
@@ -87,10 +87,10 @@ body{
   background: url("assets/muslim3.gif");
   /* left: calc(var(--pixel-size) * 1);  */
   /* top:calc(var(--pixel-size) * 20); */
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   position: relative; 
-  left: calc(var(--pixel-size) * -500);
-  top: calc(var(--pixel-size) * -14);
+  left: -1500px;
+  top: -40px;
 }
 
 @keyframes play {
@@ -182,11 +182,11 @@ body{
 
 /* //herber */
 .messages .bot {
-  background: lightblue;
-  width: 170px;
+  background: rgb(236, 202, 155);
+  width: 300px;
   /* height: 220px; */
   margin: 35px auto; 
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   position: absolute; 
   left: 90px;
   top: 300px;
@@ -202,12 +202,12 @@ body{
 .messages1 .self {
   /* text-align: right;
   margin-left: auto; */
-  background: #DDD;
+  background: #caa679;
 
   width: 170px;
   /* height: 200px; */
   margin: 35px auto; 
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   position: absolute; 
   left: -300px;
   top: 500px;
@@ -263,14 +263,14 @@ body{
 }
 
 .messages2 .bot2 {
-  background: lightblue;
+  background:  rgb(236, 202, 155);
   width: 170px;
   /* height: 170px; */
   margin: 10px auto;
-  border: 2px solid #333;
-  position: relative; 
-  left: -10px;
-  top: 200px;
+  /* border: 2px solid #333; */
+  position: absolute; 
+  left: 90px;
+  top: 360px;
 
   overflow: hidden; /* Prevents content from overflowing */
   word-wrap: break-word; /* Wrap long words */
@@ -280,18 +280,18 @@ body{
 }
 
 .messages3 .self2 {
-  background: #DDD;
-  width: 200px;
+  background: #caa679;
+  width: 140px;
   /* height: 170px; */
   margin: 10px auto;
-  border: 2px solid #333;
-  position: relative; 
-  left: -400px;
-  top: 230px;
+  /* border: 2px solid #333; */
+  position: absolute; 
+  left: -260px;
+  top: 500px;
 
   overflow: hidden; /* Prevents content from overflowing */
   word-wrap: break-word; /* Wrap long words */
   resize: both; /* Allow resizing */
   height: auto; /* or you can omit height altogether */
-
 }
+

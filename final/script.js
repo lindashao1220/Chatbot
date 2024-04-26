@@ -142,33 +142,6 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
-// function checkOverlap(a, b) {
-//   var aRect = a.getBoundingClientRect();
-//   var bRect = b.getBoundingClientRect();
-//   if (!(aRect.right < bRect.left - 20)){
-//     b.style.visibility = "visible";
-//     instructions.innerHTML = "Press the ENTER key to talk!"
-//     instructions.style.visibility = "visible";
-
-//     // chat.style.visibility = "visible";
-
-
-//     setTimeout(
-//         function() {instructions.style.visibility = "hidden";}, 5000);
-//     document.addEventListener("keydown", (e) => {
-//       var code = (e.keyCode ? e.keyCode : e.which);
-//       if(code == 13) {
-//         go = true;
-//       }
-//     });
-
-//   }
-//   else{
-//       b.style.visibility = "hidden";
-//       chat.style.visibility = "visible";
-//       go=false;
-//   }
-// }
 
 function checkOverlapGif1(a, b) {
   var audio = document.getElementById("myAudio");
@@ -185,7 +158,7 @@ function checkOverlapGif1(a, b) {
   
   if (aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
     b.style.visibility = "visible";
-    instructions.innerHTML = "Press the ENTER key to talk!";
+    instructions.innerHTML = "Type something in the text box below and let's chat!";
     instructions.style.visibility = "visible";
     chat.style.visibility = "visible";
 
@@ -215,7 +188,7 @@ function checkOverlapGif2(a, b) {
 
   if (aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
     b.style.visibility = "visible";
-    instructions.innerHTML = "Press the ENTER key to talk!";
+    instructions.innerHTML = "Type something in the text box below and let's chat!";
     instructions.style.visibility = "visible";
     chat2.style.visibility = "visible";
 
@@ -266,6 +239,22 @@ form.addEventListener('submit', (e) => {
 function botReply(message){
   message_container.innerHTML = `<div class="bot">${message}</div>`;
   location.href = '#edge';
+
+      // Create a new SpeechSynthesisUtterance instance with the message
+      console.log(message)
+
+      const synth = window.speechSynthesis;
+      const utterThis = new SpeechSynthesisUtterance(message);
+  
+      // Get the selected voice from the dropdown
+      // const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+      // console.log(synth.getVoices()[0]);
+      utterThis.voice = synth.getVoices()[0];
+      // utterThis.pitch = 3;
+      // utterThis.rate = 2;
+  
+      synth.speak(utterThis);
+      
 }
 
 function selfReply(message){
@@ -280,7 +269,7 @@ function selfReply(message){
 
 function botReady(){
   bot.sortReplies();
-  botReply('Hey, did you hear the sound coming from the Mosque?');
+  // botReply('Hey, did you hear the sound coming from the Mosque?');
 }
 
 function botNotReady(err){
@@ -311,9 +300,28 @@ form2.addEventListener('submit', (e) => {
   input_box2.value = '';
 });
 
+
+
 function botReply2(message){
   message_container2.innerHTML = `<div class="bot2">${message}</div>`;
   location.href = '#edge2';
+
+
+  
+    // Create a new SpeechSynthesisUtterance instance with the message
+    console.log(message)
+
+    const synth = window.speechSynthesis;
+    const utterThis = new SpeechSynthesisUtterance(message);
+
+    // Get the selected voice from the dropdown
+    // const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    // console.log(synth.getVoices()[0]);
+    utterThis.voice = synth.getVoices()[0];
+    // utterThis.pitch = 3;
+    // utterThis.rate = 2;
+
+    synth.speak(utterThis);
 }
 
 function selfReply2(message){
@@ -327,23 +335,9 @@ function selfReply2(message){
 
 function botReady2(){
   bot2.sortReplies();
-  botReply2("Hello! Marhaba! I am Aya. What's your name?");
+  // botReply2("");
 }
 
 function botNotReady2(err){
   console.log("An error has occurred.", err);
 }
-
-
-// var audio = document.getElementById("myAudio");
-// var audioPlayed = false;
-
-// function playAudio() {
-//     if (!audioPlayed) {
-//         audio.play();
-//         audioPlayed = true;
-//     }
-// }
-
-// // Play audio 10 seconds after page load
-// setTimeout(playAudio, 10000); // 10000 milliseconds = 10 seconds

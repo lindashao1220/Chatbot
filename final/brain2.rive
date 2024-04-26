@@ -18,16 +18,13 @@
 ! sub who's   = who is
 
 
-+ *
-- Hello! Marhaba! I am Aya.
 
 + *
-% hello marhaba i am aya 
-* <get username> == undefined => What is your name?
+* <get username> == undefined => Hello! Marhaba! I am Aya. What is your name?
 - Greetings, <get username>. oh, my friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?
 
 + [my name is|i am|yes my name is|ok my name is|sure my name is|sure i am|ok i am|yes i am|yeah sure my name is|ok sure my name is] *
-% what is your name
+% hello marhaba i am aya what is your name
 - <set username=<formal>>oh, my old friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?{topic=1}
 
 > topic 1
