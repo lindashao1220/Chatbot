@@ -23,7 +23,7 @@
 * <get username> == undefined => Hello! Marhaba! I am Aya. What is your name?
 - Greetings, <get username>. oh, my friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?
 
-+ [my name is|i am|yes my name is|ok my name is|sure my name is|sure i am|ok i am|yes i am|yeah sure my name is|ok sure my name is] *
++ [my name is|i am] *
 % hello marhaba i am aya what is your name
 - <set username=<formal>>oh, my old friend <get username>, welcome to Abu Dhabi! It’s so exciting to meet you here. Are you a traveler here?{topic=1}
 
@@ -45,7 +45,7 @@
 < topic
 
 > topic 4
-+ [*]yes|yep|yeah|ok|okay|sure[*]
++ [*]yes|yep|yeah|ok|okay|sure|have[*]
 - Right! It’s nice to know that you have tried it before. The coffee is usually unsweetened, so we usually use sweet dates to make up for the bitter flavor. The date is also a cultural symbol for us, representing hospitality, generosity, and abundance. Anyway, thanks for visiting us, it is very nice talking to you! Hope you have a rest of a pleasant journey!{topic=end}
 + [*]no|nope|not|sorry[*]
 - Ohh, you should definitely try it. The coffee is usually unsweetened, so we usually use sweet dates to make up for the bitter flavor. The date is also a cultural symbol for us, representing hospitality, generosity, and abundance. Anyway, thanks for visiting us, it is very nice talking to you! Hope you have a rest of a pleasant journey!{topic=end}

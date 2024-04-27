@@ -158,7 +158,7 @@ function checkOverlapGif1(a, b) {
   
   if (aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
     b.style.visibility = "visible";
-    instructions.innerHTML = "Type something in the text box below and let's chat!";
+    instructions.innerHTML = "Type something in the text box below and hit enter to chat!";
     instructions.style.visibility = "visible";
     chat.style.visibility = "visible";
 
@@ -188,7 +188,7 @@ function checkOverlapGif2(a, b) {
 
   if (aRect.right + overlapThreshold >= bRect.left && aRect.left - overlapThreshold <= bRect.right) {
     b.style.visibility = "visible";
-    instructions.innerHTML = "Type something in the text box below and let's chat!";
+    instructions.innerHTML = "Type something in the text box below and hit enter to chat!";
     instructions.style.visibility = "visible";
     chat2.style.visibility = "visible";
 
@@ -249,9 +249,9 @@ function botReply(message){
       // Get the selected voice from the dropdown
       // const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
       // console.log(synth.getVoices()[0]);
-      utterThis.voice = synth.getVoices()[0];
-      // utterThis.pitch = 3;
-      // utterThis.rate = 2;
+      utterThis.voice = synth.getVoices()[1];
+      utterThis.pitch = 0.7;
+      utterThis.rate = 1.4;
   
       synth.speak(utterThis);
       
@@ -318,8 +318,8 @@ function botReply2(message){
     // const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
     // console.log(synth.getVoices()[0]);
     utterThis.voice = synth.getVoices()[0];
-    // utterThis.pitch = 3;
-    // utterThis.rate = 2;
+    utterThis.pitch = 1.1;
+    utterThis.rate = 1.2;
 
     synth.speak(utterThis);
 }
